@@ -1,1 +1,9 @@
-<p>frontpage works!</p>
+<div class="container">
+  <h1>Hejsa</h1>
+
+  <ng-container *ngIf="books$ | async as books">
+    <p *ngFor="let b of books">
+      {{ b | json }}
+    </p>
+  </ng-container>
+</div>

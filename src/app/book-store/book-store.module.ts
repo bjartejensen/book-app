@@ -6,9 +6,10 @@ import { BookCoverComponent } from './ui/book-cover/book-cover.component';
 import { BookDetailsComponent } from './ui/book-details/book-details.component';
 import { BookContentComponent } from './ui/book-content/book-content.component';
 import { BookCardComponent } from './ui/book-card/book-card.component';
+import { BookForewordComponent } from './ui/book-foreword/book-foreword.component';
 
 @NgModule({
-  declarations: [FrontpageComponent, BookCoverComponent, BookDetailsComponent, BookContentComponent, BookCardComponent],
+  declarations: [FrontpageComponent, BookCoverComponent, BookDetailsComponent, BookContentComponent, BookCardComponent, BookForewordComponent],
   imports: [CommonModule, BookStoreRoutingModule],
 })
 export class BookStoreModule {}
