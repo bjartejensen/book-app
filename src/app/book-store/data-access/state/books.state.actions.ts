@@ -12,3 +12,8 @@ export const fetchAllBooksFailure = createAction(
   '[BOOKS API] Fetch All books Succes',
   props<{ error: string }>()
 );
+
+export const setSelectedISBN = createAction(
+  '[BOOKS API] Set Selected Book ISBN',
+  props<{ ISBN: string }>()
+);

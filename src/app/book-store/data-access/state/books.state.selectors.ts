@@ -8,3 +8,9 @@ export const selectBookInStore = createSelector(
   selectBookStoreState,
   (state: BookStoreState) => state.books
 );
+
+export const selectedBookByISBN = createSelector(
+  selectBookStoreState,
+  (state: BookStoreState) =>
+    state.books.find((x) => x.details.isbn === state.selectedISBN)!
+);

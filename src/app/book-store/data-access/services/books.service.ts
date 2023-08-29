@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IBookPreview } from '../../models/book-store.models';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { API_URL } from '../../models/book-store.constants';
 
 @Injectable({
@@ -17,7 +17,6 @@ export class BooksService {
   //#region Public Methods
 
   fetchBooks(): Observable<IBookPreview[]> {
-    debugger;
     return this.httpClient.get<IBookPreview[]>(API_URL);
   }
 

@@ -1,9 +1,16 @@
 <div class="container">
-  <h1>Hejsa</h1>
-
-  <ng-container *ngIf="books$ | async as books">
-    <p *ngFor="let b of books">
-      {{ b | json }}
-    </p>
-  </ng-container>
+  <div class="books-overview" *ngIf="books$ | async as books">
+    <app-book-card
+      (ISBNEmitter)="onSelectedISBN($event)"
+      *ngFor="let b of books"
+      [book]="b"
+    >
+    </app-book-card>
+  </div>
+  <div class="book-details">
+    <ng-container *ngIf="selectedBookByISBN$ | async as sb">
+      <h2>Selected Book Details</h2>
+      <span>{{ sb.details.isbn }}</span>
+    </ng-container>
+  </div>
 </div>

@@ -1,1 +1,14 @@
-<p>book-card works!</p>
+<div class="container" (click)="ISBNEmitter.emit(book.details.isbn)">
+  <div class="title">
+    <h2>{{ book.cover.title }}</h2>
+  </div>
+
+  <div class="author">
+    <h4 *ngFor="let author of book.cover.authors">{{ author }}</h4>
+  </div>
+
+  <div class="publisher">
+    <h6>{{ book.details.publisher }}</h6>
+    <span>{{ book.details.publishedYear }}</span>
+  </div>
+</div>

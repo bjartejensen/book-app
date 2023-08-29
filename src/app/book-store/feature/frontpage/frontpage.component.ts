@@ -10,8 +10,27 @@ import { IBookPreview } from '../../models/book-store.models';
   styleUrls: ['./frontpage.component.scss'],
 })
 export class FrontpageComponent {
+  //#region D.I
+
   private booksService: IBookServiceCompositeForBookStoreFrontpage =
     inject(BOOKS_FACADE_TOKEN);
 
+  //#endregion
+
+  //#region Observables
+
   books$: Observable<IBookPreview[]> = this.booksService.books$;
+
+  selectedBookByISBN$: Observable<IBookPreview> =
+    this.booksService.selectedBookByISBN$;
+
+  //#endregion
+
+  //#region Public Methods
+
+  onSelectedISBN(ISBN: string): void {
+    this.booksService.setSelectedISBN(ISBN);
+  }
+
+  //#endregion
 }

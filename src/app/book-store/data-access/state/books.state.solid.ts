@@ -9,8 +9,20 @@ interface IBooksFetchDispatch {
   booksFetch(): void;
 }
 
+interface ISelectedBookByISBNObserve {
+  selectedBookByISBN$: Observable<IBookPreview>;
+}
+
+interface ISetSelectedISBNDispatch {
+  setSelectedISBN(ISBN: string): void;
+}
+
 export interface IBooksServiceCompositeForFacade
   extends IBooksObserve,
-    IBooksFetchDispatch {}
+    IBooksFetchDispatch,
+    ISelectedBookByISBNObserve,
+    ISetSelectedISBNDispatch {}
 export interface IBookServiceCompositeForBookStoreFrontpage
-  extends IBooksObserve {}
+  extends IBooksObserve,
+    ISelectedBookByISBNObserve,
+    ISetSelectedISBNDispatch {}

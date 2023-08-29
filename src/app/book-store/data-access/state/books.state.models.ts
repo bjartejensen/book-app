@@ -5,6 +5,6 @@ export const BOOKS_FEATURE_KEY = 'books';
 export interface BookStoreState {
   isLoading: boolean;
   books: IBookPreview[];
-  selectedIndex?: number;
+  selectedISBN?: string;
   error?: string;
 }

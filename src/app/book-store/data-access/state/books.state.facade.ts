@@ -24,12 +24,20 @@ export class BooksFacade implements IBooksServiceCompositeForFacade {
     select(BooksSelectors.selectBookInStore)
   );
 
+  selectedBookByISBN$: Observable<IBookPreview> = this.store.pipe(
+    select(BooksSelectors.selectedBookByISBN)
+  );
+
   constructor() {
     this.booksFetch();
 
-    this.books$.subscribe((x) => {
+    this.selectedBookByISBN$.subscribe((x) => {
       debugger;
     });
+  }
+
+  setSelectedISBN(ISBN: string): void {
+    this.store.dispatch(BooksActions.setSelectedISBN({ ISBN: ISBN }));
   }
 
   booksFetch(): void {
