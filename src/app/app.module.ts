@@ -7,6 +7,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { BooksEffects } from './book-store/data-access/state/books.state.effects';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot([BooksEffects]),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

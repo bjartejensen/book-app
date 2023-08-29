@@ -1,1 +1,17 @@
-<p>book-cover works!</p>
+<div class="container">
+  <div class="title">
+    <h2 data-cy="book-cover-title">{{ bookCover.title }}</h2>
+  </div>
+  <div class="sub-title">
+    <h4 data-cy="book-cover-subtitle">{{ bookCover.subTitle }}</h4>
+  </div>
+  <div class="authors">
+    <h6 [id]="i" *ngFor="let author of bookCover.authors; let i = index">
+      {{ author }}
+    </h6>
+  </div>
+
+  <div class="bg-icon">
+    <mat-icon data-cy="book-cover-icon">library_books</mat-icon>
+  </div>
+</div>

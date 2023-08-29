@@ -11,6 +11,10 @@ import { StoreModule } from '@ngrx/store';
 import { BOOKS_FEATURE_KEY } from './data-access/state/books.state.models';
 import * as fromBooks from './data-access/state/books.state.reducers';
 
+import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
+import { BookContentItemComponent } from './ui/book-content-item/book-content-item.component';
+
 @NgModule({
   declarations: [
     FrontpageComponent,
@@ -19,11 +23,14 @@ import * as fromBooks from './data-access/state/books.state.reducers';
     BookContentComponent,
     BookCardComponent,
     BookForewordComponent,
+    BookContentItemComponent,
   ],
   imports: [
     CommonModule,
     BookStoreRoutingModule,
     StoreModule.forFeature(BOOKS_FEATURE_KEY, fromBooks.booksReducer),
+    MatTabsModule,
+    MatIconModule,
   ],
 })
 export class BookStoreModule {}

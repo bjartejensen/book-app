@@ -10,7 +10,21 @@
   <div class="book-details">
     <ng-container *ngIf="selectedBookByISBN$ | async as sb">
       <h2>Selected Book Details</h2>
-      <span>{{ sb.details.isbn }}</span>
+      <mat-tab-group animationDuration="0ms">
+        <mat-tab label="Cover">
+          <app-book-cover [bookCover]="sb.cover"></app-book-cover>
+        </mat-tab>
+        <mat-tab label="Details">
+          <app-book-details [bookDetails]="sb.details"></app-book-details>
+        </mat-tab>
+        <mat-tab label="Content">
+          <app-book-content [bookContent]="sb.content"></app-book-content>
+        </mat-tab>
+        <mat-tab label="Foreword">
+          <app-book-foreword [bookForeword]="sb.foreword"></app-book-foreword>
+        </mat-tab>
+      </mat-tab-group>
+      <!-- <span>{{ sb.details.isbn }}</span> -->
     </ng-container>
   </div>
 </div>

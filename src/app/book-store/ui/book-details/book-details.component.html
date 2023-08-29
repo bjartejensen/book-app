@@ -1,1 +1,16 @@
-<p>book-details works!</p>
+<div class="container">
+  <div class="publisher">
+    <h2 data-cy="book-details-publisher">{{ bookDetails.publisher }}</h2>
+  </div>
+  <div class="logo" *ngIf="bookDetails.publisherLogo as logo">
+    <mat-icon data-cy="book-details-logo">{{ logo }}</mat-icon>
+  </div>
+
+  <div class="pub-year">
+    <h6 data-cy="book-details-publish-year">{{ bookDetails.publishedYear }}</h6>
+  </div>
+
+  <div class="isbn">
+    <h5 data-cy="book-details-isbn">{{ bookDetails.isbn }}</h5>
+  </div>
+</div>

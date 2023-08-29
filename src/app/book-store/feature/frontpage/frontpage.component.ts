@@ -30,6 +30,10 @@ export class FrontpageComponent {
 
   onSelectedISBN(ISBN: string): void {
     this.booksService.setSelectedISBN(ISBN);
+
+    // this.selectedBookByISBN$.subscribe(x=>{
+    //   x?.foreword
+    // })
   }
 
   //#endregion

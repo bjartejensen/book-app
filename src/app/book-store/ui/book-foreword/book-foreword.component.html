@@ -1,1 +1,12 @@
-<p>book-foreword works!</p>
+<ng-template #noforword>
+  <h3>No Foreword</h3>
+</ng-template>
+
+<div class="container" *ngIf="bookForeword; else noforword">
+  <div class="title">
+    <h2 data-cy="book-foreword-header">{{ bookForeword.header }}</h2>
+    <div class="foreword">
+      <p data-cy="book-foreword-content">{{ bookForeword.content }}</p>
+    </div>
+  </div>
+</div>

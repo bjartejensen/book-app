@@ -32,5 +32,5 @@ export interface IBookPreview {
   cover: IBookCover;
   details: IBookDetails;
   content: IBookContent;
-  foreword: IBookForeword;
+  foreword?: IBookForeword;
 }
