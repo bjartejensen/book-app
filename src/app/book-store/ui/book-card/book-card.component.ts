@@ -8,10 +8,5 @@ import { IBookPreview } from '../../models/book-store.models';
 })
 export class BookCardComponent {
   @Input() book!: IBookPreview;
-
   @Output() ISBNEmitter = new EventEmitter<string>();
-
-  constructor() {
-    //this.book.details.isbn
-  }
 }

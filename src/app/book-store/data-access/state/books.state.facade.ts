@@ -20,6 +20,8 @@ export class BooksFacade implements IBooksServiceCompositeForFacade {
   private readonly store = inject(Store);
   //#endregion
 
+  //#region Implementation - Observables
+
   books$: Observable<IBookPreview[]> = this.store.pipe(
     select(BooksSelectors.selectBookInStore)
   );
@@ -28,19 +30,29 @@ export class BooksFacade implements IBooksServiceCompositeForFacade {
     select(BooksSelectors.selectedBookByISBN)
   );
 
-  constructor() {
-    this.booksFetch();
+  //#endregion
 
-    this.selectedBookByISBN$.subscribe((x) => {
-      debugger;
-    });
+  //#region Life Cycle Hooks
+
+  constructor() {
+    this.booksFetchAll();
   }
+
+  //#endregion
+
+  //#region Implementation - Set Selected ISBN
 
   setSelectedISBN(ISBN: string): void {
     this.store.dispatch(BooksActions.setSelectedISBN({ ISBN: ISBN }));
   }
 
-  booksFetch(): void {
+  //#endregion
+
+  //#region Implementation - Book Fetch All
+
+  booksFetchAll(): void {
     this.store.dispatch(BooksActions.fetchAllBooks());
   }
+
+  //#endregion
 }

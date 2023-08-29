@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IBookPreview } from '../../models/book-store.models';
-import { Observable, map } from 'rxjs';
+import { Observable } from 'rxjs';
 import { API_URL } from '../../models/book-store.constants';
 
 @Injectable({

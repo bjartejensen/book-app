@@ -25,7 +25,7 @@ export class BooksEffects {
           })
         );
       }),
-      catchError((error) => {
+      catchError(() => {
         return of(
           BooksActions.fetchAllBooksFailure({ error: 'Fetching books failed' })
         );
