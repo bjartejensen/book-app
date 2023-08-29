@@ -26,7 +26,7 @@ export class BooksFacade implements IBooksServiceCompositeForFacade {
     select(BooksSelectors.selectBookInStore)
   );
 
-  selectedBookByISBN$: Observable<IBookPreview> = this.store.pipe(
+  selectedBookByISBN$: Observable<IBookPreview | undefined> = this.store.pipe(
     select(BooksSelectors.selectedBookByISBN)
   );
 

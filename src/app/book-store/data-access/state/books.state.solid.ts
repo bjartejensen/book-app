@@ -10,7 +10,7 @@ interface IBooksFetchDispatch {
 }
 
 interface ISelectedBookByISBNObserve {
-  selectedBookByISBN$: Observable<IBookPreview>;
+  selectedBookByISBN$: Observable<IBookPreview | undefined>;
 }
 
 interface ISetSelectedISBNDispatch {

@@ -1,10 +1,18 @@
+[![Component tests](https://github.com/bjartejensen/book-app/actions/workflows/component-tests.yml/badge.svg)](https://github.com/bjartejensen/book-app/actions/workflows/component-tests.yml)
+
 # BookApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
 
-## Development server
+The application contains the following functionality:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Build with mobile responsiveness in mind via CSS-grid and appropriate media queries.
+
+## Testing
+
+Testing have been conducted as `component-testing` at the UI-component level and `E2E-test` on the Feature-component level and all testing is done in Cypress.
+
+A priliminary GitHub Actions workflow has been set up for `linting` and `component-testing`. `E2E-test` has been run locally.
 
 ## Code scaffolding
 

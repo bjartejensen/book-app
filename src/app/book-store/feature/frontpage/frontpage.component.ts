@@ -21,7 +21,7 @@ export class FrontpageComponent {
 
   books$: Observable<IBookPreview[]> = this.booksService.books$;
 
-  selectedBookByISBN$: Observable<IBookPreview> =
+  selectedBookByISBN$: Observable<IBookPreview | undefined> =
     this.booksService.selectedBookByISBN$;
 
   //#endregion

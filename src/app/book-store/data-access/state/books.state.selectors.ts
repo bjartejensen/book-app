@@ -12,5 +12,5 @@ export const selectBookInStore = createSelector(
 export const selectedBookByISBN = createSelector(
   selectBookStoreState,
   (state: BookStoreState) =>
-    state.books.find((x) => x.details.isbn === state.selectedISBN)!
+    state.books.find((x) => x.details.isbn === state.selectedISBN) ?? undefined
 );
