@@ -1,5 +1,7 @@
 [![Component tests](https://github.com/bjartejensen/book-app/actions/workflows/component-tests.yml/badge.svg)](https://github.com/bjartejensen/book-app/actions/workflows/component-tests.yml)
 
+[![Linting Angular](https://github.com/bjartejensen/book-app/actions/workflows/linting.yml/badge.svg)](https://github.com/bjartejensen/book-app/actions/workflows/linting.yml)
+
 # BookApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
@@ -14,22 +16,29 @@ Testing have been conducted as `component-testing` at the UI-component level and
 
 A priliminary GitHub Actions workflow has been set up for `linting` and `component-testing`. `E2E-test` has been run locally.
 
-## Code scaffolding
+## NgRx
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+In addition, I have strived to code up the solution as reactively and declarative as possible. By using NgRx the current solution aims at setting up a closed circuit of asynchronous data streams via NgRx. This step simplifies data stream subscription, handling of observable streams and thus readability.
 
-## Build
+The integration of NgRx has consumed some start-up time, and may not a part of the original scope of this task. However, my experience is, that it's always time well spend to set up application-wide state management, almost no matter the initial size or scope. I hope you follow my line of thinking and prioritization.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Structure of the app
 
-## Running unit tests
+The main functionality has been set up in the weather module. (the only feature module in this project)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The module consist of four folders:
 
-## Running end-to-end tests
+- data-access: Containing data service and NgRx store related entities
+- feature: One smart component (frontpage) to tie the business logic together
+- model: Interfaces, types and constants used througout the workflow
+- ui: dumb-components with no, or limited, dependencies and with rendering as primary responsibility
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+The weather module is lazy-loaded in the app as specified in the `app-rounting.module.ts`.
 
-## Further help
+## External Dependencies
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Angular Material
+
+- NgRx - state management
+
+- Cypress - component- and E2E testing framework
