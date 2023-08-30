@@ -15,7 +15,7 @@ The main functionality has been set up in the book-store module. (the only featu
 The module consist of four folders:
 
 - data-access: Containing data service and NgRx store related entities
-- feature: One smart component (frontpage) to tie the business logic together
+- feature: Two smart components (frontpage and book-page) to tie the business logic together
 - model: Interfaces, types and constants used througout the workflow
 - ui: dumb-components with no, or limited, dependencies and with rendering as primary responsibility
 
@@ -25,7 +25,7 @@ The book-store module is lazy-loaded in the app as specified in the `app-rountin
 
 Throughout the application I have tried to separate responsibility between components. The SMART/DUMB component distinction is an important way to structure and delegate the responsibility, where DUMB component only receives data via @Input() and only emits data via @Output().
 
-Leveraging Angular’s dependency injection mechanism allows for injection of interfaces rather than class instances. This is an important feature because we can provision highly tailored api’s to SMART components in need of a certain slice of a service, in turn adhering to both the Interface Segregation Principle and Dependency Inversion Principle. (and arguably also staying in line with Liskov’s substitution principle)
+Leveraging Angular’s dependency injection mechanism allows for injection of interfaces rather than class instances. This is an important feature because we can provision highly tailored api’s to SMART components in need of a certain slice of a service, in turn adhering to both the Interface Segregation Principle and Dependency Inversion Principle. (and indirectly also staying in line with Liskov’s substitution principle)
 
 ## Testing
 
