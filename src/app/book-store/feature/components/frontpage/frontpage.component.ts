@@ -1,15 +1,15 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { IBookServiceCompositeForBookStoreFrontpage } from '../../data-access/state/books.state.solid';
-import { BOOKS_FACADE_TOKEN } from '../../data-access/state/books.state.facade';
+import { Component, inject } from '@angular/core';
+import { IBookServiceCompositeForBookStoreFrontpage } from '../../../data-access/state/books.state.solid';
+import { BOOKS_FACADE_TOKEN } from '../../../data-access/state/books.state.facade';
 import { Observable } from 'rxjs';
-import { IBookPreview } from '../../models/book-store.models';
+import { IBookPreview } from '../../../models/book-store.models';
 
 @Component({
   selector: 'app-frontpage',
   templateUrl: './frontpage.component.html',
   styleUrls: ['./frontpage.component.scss'],
 })
-export class FrontpageComponent implements OnInit {
+export class FrontpageComponent {
   //#region D.I
 
   private booksService: IBookServiceCompositeForBookStoreFrontpage =
@@ -32,14 +32,6 @@ export class FrontpageComponent implements OnInit {
    */
   selectedBookByISBN$: Observable<IBookPreview | undefined> =
     this.booksService.selectedBookByISBN$;
-
-  //#endregion
-
-  //#region Life Cycle
-
-  ngOnInit(): void {
-    //this.booksService.setSelectedISBN('978-0-141-99106-2');
-  }
 
   //#endregion
 

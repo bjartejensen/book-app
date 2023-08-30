@@ -1,3 +1,5 @@
+@use "../../../../styles.scss" as scss;
+
 .container {
   position: relative;
   display: grid;
@@ -5,11 +7,19 @@
   width: 300px;
   aspect-ratio: 3 / 2;
   border-radius: 0.375rem;
-  border: greenyellow 2px solid;
-  background-color: palevioletred;
+  transition: box-shadow 200ms ease-in;
 
   &:hover {
     cursor: pointer;
     box-shadow: 2px 2px 2px black;
   }
+}
+
+.authors {
+  color: darken(scss.$preview-bg-color, 30%);
+}
+
+.publisher {
+  display: grid;
+  place-items: center end;
 }

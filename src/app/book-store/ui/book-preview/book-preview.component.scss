@@ -3,7 +3,8 @@
 .container {
   position: relative;
   display: grid;
-  width: 90vw;
-  overflow-y: scroll;
-  background-color: aqua;
+  background-color: lighten(
+    map-get(map-get(scss.$book-app-theme, background), dialog),
+    10%
+  );
 }

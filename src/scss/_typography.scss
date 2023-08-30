@@ -18,7 +18,7 @@ $noname-typography: mat.define-legacy-typography-config(
   $body-1: mat.define-typography-level(0.75rem, 0.85rem, 400, fonts.$text-font),
   $caption:
     mat.define-typography-level(0.6875rem, 0.7rem, 400, fonts.$text-font),
-  $button: mat.define-typography-level(1rem, 1rem, 900, fonts.$text-font),
+  $button: mat.define-typography-level(1rem, 1rem, 900, fonts.$special-font),
   $input: mat.define-typography-level(inherit, 1.125, 400),
 );
 
@@ -57,4 +57,8 @@ span {
 
 a {
   @include mat.typography-level($noname-typography, caption);
+}
+
+button {
+  @include mat.typography-level($noname-typography, button);
 }

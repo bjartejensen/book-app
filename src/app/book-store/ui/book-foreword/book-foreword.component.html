@@ -1,12 +1,21 @@
 <ng-template #noforword>
-  <h3>No Foreword</h3>
+  <div class="no-foreword preview-gradient title pb-m-1">
+    <h3>No Foreword</h3>
+  </div>
 </ng-template>
 
-<div class="container" appTabContentSize *ngIf="bookForeword; else noforword">
-  <div class="title">
-    <h2 data-cy="book-foreword-header">{{ bookForeword.header }}</h2>
-    <div class="foreword">
-      <p data-cy="book-foreword-content">{{ bookForeword.content }}</p>
-    </div>
+<div
+  class="container preview-gradient"
+  appTabContentSize
+  *ngIf="bookForeword; else noforword"
+>
+  <div class="title pb-m-1">
+    <h4 data-cy="book-foreword-header">{{ bookForeword.header }}</h4>
+  </div>
+
+  <div class="foreword">
+    <p class="pi-m-1" data-cy="book-foreword-content">
+      {{ bookForeword.content }}
+    </p>
   </div>
 </div>

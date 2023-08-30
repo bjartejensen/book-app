@@ -1,4 +1,5 @@
 //Utility class to support mobile responsiveness in the local templates
+@use "./colors" as colors;
 
 //Map of all supported screen resolution breaks
 $w-map: "m" 300, "sm" 800, "md" 1200, "lg" 1600, "xl" 2000;
@@ -94,6 +95,40 @@ $fs-map: "0" 0rem, "025" 0.25rem, "05" 0.5rem, "075" 0.75rem, "08" 0.8rem,
   }
 }
 
+//Map of container widths from 10% to 100%
+$container-height-map: "10" 10, "20" 20, "30" 30, "40" 40, "50" 50, "60" 60,
+  "70" 70, "75" 75, "80" 80, "90" 90, "95" 95, "100" 100;
+
+@each $ss, $sw in $w-map {
+  @each $cwmk, $cwmv in $container-height-map {
+    .ch-#{$ss}-#{$cwmk} {
+      @media (min-width: #{$sw}px) {
+        height: #{$cwmv}vh;
+      }
+    }
+
+    .cw-#{$ss}-#{$cwmk} {
+      @media (min-width: #{$sw}px) {
+        width: #{$cwmv}"%";
+      }
+    }
+
+    .cvw-#{$ss}-#{$cwmk} {
+      @media (min-width: #{$sw}px) {
+        width: #{$cwmv}vw;
+      }
+    }
+  }
+}
+
 .cdk-overlay-black-backdrop {
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.preview-gradient {
+  background: linear-gradient(
+    90deg,
+    colors.$preview-bg-color,
+    darken(colors.$preview-bg-color, 20%)
+  );
 }

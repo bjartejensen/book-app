@@ -1,10 +1,10 @@
 <div
   data-cy="book-preview-container"
   appTabParentContentSize
-  class="container"
+  class="container cvw-m-90 cvw-md-50 cvw-lg-40 ch-lg-20"
   *ngIf="bookPreview"
 >
-  <mat-tab-group animationDuration="0ms">
+  <mat-tab-group animationDuration="0ms" color="accent">
     <mat-tab class="mat-tab" label="Cover">
       <app-book-cover
         data-cy="book-preview-cover"
@@ -16,12 +16,6 @@
         data-cy="book-preview-details"
         [bookDetails]="bookPreview.details"
       ></app-book-details>
-    </mat-tab>
-    <mat-tab label="Content">
-      <app-book-content
-        data-cy="book-preview-content"
-        [bookContent]="bookPreview.content"
-      ></app-book-content>
     </mat-tab>
     <mat-tab label="Foreword">
       <app-book-foreword

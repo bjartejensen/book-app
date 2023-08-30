@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FrontpageComponent } from './feature/frontpage/frontpage.component';
+import { FrontpageComponent } from './feature/components/frontpage/frontpage.component';
 import { BookStoreRoutingModule } from './book-store-routing.module';
 import { BookCoverComponent } from './ui/book-cover/book-cover.component';
 import { BookDetailsComponent } from './ui/book-details/book-details.component';
@@ -15,11 +15,14 @@ import { OverlayModule } from '@angular/cdk/overlay';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatButtonModule } from '@angular/material/button';
+
 import { BookContentItemComponent } from './ui/book-content-item/book-content-item.component';
 import { BookPreviewComponent } from './ui/book-preview/book-preview.component';
 import { TabContentSizeDirective } from './ui/directives/tab-content-size.directive';
 import { MaxWidthDirective } from './feature/directives/max-width.directive';
 import { TabParentContentSizeDirective } from './ui/directives/tab-parent-content-size.directive';
+import { BookPageComponent } from './feature/components/book-page/book-page.component';
 
 @NgModule({
   declarations: [
@@ -34,12 +37,14 @@ import { TabParentContentSizeDirective } from './ui/directives/tab-parent-conten
     TabContentSizeDirective,
     MaxWidthDirective,
     TabParentContentSizeDirective,
+    BookPageComponent,
   ],
   imports: [
     CommonModule,
     BookStoreRoutingModule,
     StoreModule.forFeature(BOOKS_FEATURE_KEY, fromBooks.booksReducer),
     MatTabsModule,
+    MatButtonModule,
     MatIconModule,
     OverlayModule,
   ],

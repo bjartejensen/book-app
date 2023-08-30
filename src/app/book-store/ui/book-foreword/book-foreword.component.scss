@@ -1,4 +1,28 @@
-.container {
+@use "../../../../styles.scss" as scss;
+
+.container,
+.title,
+.foreword,
+.no-foreword {
   position: relative;
-  overflow-y: scroll;
+  display: grid;
+}
+
+.container {
+  grid-template-rows: 30% 70%;
+  justify-items: center;
+  background-color: scss.$preview-bg-color;
+}
+
+.title {
+  place-items: center;
+  text-align: center;
+}
+
+.foreword {
+  text-align: left;
+}
+
+.no-foreword {
+  place-items: end center;
 }

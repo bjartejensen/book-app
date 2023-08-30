@@ -2,6 +2,7 @@
 @forward "./scss/utility_classes";
 @forward "./scss/typography";
 @forward "./scss/fonts";
+@forward "./scss/colors";
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use "@angular/material" as mat;
@@ -23,7 +24,7 @@ $book-app-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$book-app-theme: mat.define-light-theme(
+$book-app-theme: mat.define-dark-theme(
   (
     color: (
       primary: $book-app-primary,
@@ -37,17 +38,6 @@ $book-app-theme: mat.define-light-theme(
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($book-app-theme);
-
-/* You can add global styles to this file, and also import other style files */
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-}
 
 *,
 *::before,
@@ -66,5 +56,6 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: map-get(map-get($book-app-theme, background), dialog);
+  color: map-get(map-get($book-app-theme, foreground), text);
 }

@@ -1,6 +1,33 @@
+@use "../../../../styles.scss" as scss;
+
+$h-title: 30%;
+$h-authors: 5rem;
+
 .container {
   position: relative;
   display: grid;
-  background-color: rgb(164, 175, 10);
-  //height: 70vh;
+  grid-template-rows: $h-title calc(80% - $h-title - $h-authors) $h-authors;
+}
+
+.publisher,
+.pub-year,
+.isbn {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.publisher {
+  @media (min-width: map-get(scss.$break-points,"sm")) {
+    place-items: center;
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.isbn {
+  grid-template-columns: 50px 1fr;
+  background-color: darken(scss.$preview-bg-color, 20%);
 }

@@ -25,10 +25,21 @@
   data-cy="dashboard"
   cdkOverlayOrigin
 >
+  <div class="cta m-lg-1">
+    <button color="accent" [routerLink]="['/books']" mat-raised-button>
+      All Books
+    </button>
+  </div>
+
+  <div class="title p-m-1 mt-md-3">
+    <h1>The Book Store</h1>
+  </div>
+
   <div
-    class="books-overview"
+    class="books-overview cvw-m-100 cvw-sm-80 cvw-md-70 cvw-lg-60 cvw-xl-50"
     data-cy="books-overview"
     *ngIf="books$ | async as books"
+    appMaxWidth
   >
     <app-book-card
       (ISBNEmitter)="onSelectedISBN($event)"
