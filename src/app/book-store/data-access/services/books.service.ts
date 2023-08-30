@@ -25,7 +25,7 @@ export class BooksService {
           cover: {
             authors: ['David Graeber', 'David Wengrow'],
             subTitle: 'A new history of Humanity',
-            title: 'The Dawn of Everything',
+            title: 'The Dawn of Everything 1',
             teaserText: 'The International Bestseller',
           },
           details: {
@@ -39,37 +39,12 @@ export class BooksService {
             content:
               'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe distinctio illum tempora iusto nam, similique modi et ab impedit a dignissimos reiciendis.',
           },
-          content: {
-            bookContentItems: [
-              {
-                idx: 1,
-                title: "Farewell to Humanity's Childhood",
-                subTitle:
-                  'Or why this book is not a book about the origin of inequality',
-                pageNumber: 1,
-              },
-              {
-                idx: 2,
-                title: "Farewell to Humanity's Childhood",
-                subTitle:
-                  'Or why this book is not a book about the origin of inequality',
-                pageNumber: 61,
-              },
-              {
-                idx: 3,
-                title: "Farewell to Humanity's Childhood",
-                subTitle:
-                  'Or why this book is not a book about the origin of inequality',
-                pageNumber: 112,
-              },
-            ],
-          },
         },
         {
           cover: {
             authors: ['David Graeber', 'David Wengrow'],
             subTitle: 'A new history of Humanity',
-            title: 'The Dawn of Everything',
+            title: 'The Dawn of Everything 2',
             teaserText: 'The International Bestseller',
           },
           details: {
@@ -83,23 +58,12 @@ export class BooksService {
             content:
               'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe distinctio illum tempora iusto nam, similique modi et ab impedit a dignissimos reiciendis.',
           },
-          content: {
-            bookContentItems: [
-              {
-                idx: 1,
-                title: "Farewell to Humanity's Childhood",
-                subTitle:
-                  'Or why this book is not a book about the origin of inequality',
-                pageNumber: 1,
-              },
-            ],
-          },
         },
         {
           cover: {
             authors: ['David Graeber', 'David Wengrow'],
             subTitle: 'A new history of Humanity',
-            title: 'The Dawn of Everything',
+            title: 'The Dawn of Everything 3',
             teaserText: 'The International Bestseller',
           },
           details: {
@@ -108,16 +72,103 @@ export class BooksService {
             publisher: 'Penguine Books',
             publisherLogo: 'start_rate_half',
           },
-          content: {
-            bookContentItems: [
-              {
-                idx: 1,
-                title: "Farewell to Humanity's Childhood",
-                subTitle:
-                  'Or why this book is not a book about the origin of inequality',
-                pageNumber: 1,
-              },
-            ],
+        },
+        {
+          cover: {
+            authors: ['David Graeber', 'David Wengrow'],
+            subTitle: 'A new history of Humanity',
+            title: 'The Dawn of Everything 4',
+            teaserText: 'The International Bestseller',
+          },
+          details: {
+            isbn: '978-0-141-99106-4',
+            publishedYear: 2021,
+            publisher: 'Penguine Books',
+            publisherLogo: 'start_rate_half',
+          },
+        },
+        {
+          cover: {
+            authors: ['David Graeber', 'David Wengrow'],
+            subTitle: 'A new history of Humanity',
+            title: 'The Dawn of Everything 5',
+            teaserText: 'The International Bestseller',
+          },
+          details: {
+            isbn: '978-0-141-99106-5',
+            publishedYear: 2021,
+            publisher: 'Penguine Books',
+            publisherLogo: 'start_rate_half',
+          },
+        },
+        {
+          cover: {
+            authors: ['David Graeber', 'David Wengrow'],
+            subTitle: 'A new history of Humanity',
+            title: 'The Dawn of Everything 6',
+            teaserText: 'The International Bestseller',
+          },
+          details: {
+            isbn: '978-0-141-99106-6',
+            publishedYear: 2021,
+            publisher: 'Penguine Books',
+            publisherLogo: 'start_rate_half',
+          },
+        },
+        {
+          cover: {
+            authors: ['David Graeber', 'David Wengrow'],
+            subTitle: 'A new history of Humanity',
+            title: 'The Dawn of Everything 7',
+            teaserText: 'The International Bestseller',
+          },
+          details: {
+            isbn: '978-0-141-99106-7',
+            publishedYear: 2021,
+            publisher: 'Penguine Books',
+            publisherLogo: 'start_rate_half',
+          },
+        },
+        {
+          cover: {
+            authors: ['David Graeber', 'David Wengrow'],
+            subTitle: 'A new history of Humanity',
+            title: 'The Dawn of Everything 8',
+            teaserText: 'The International Bestseller',
+          },
+          details: {
+            isbn: '978-0-141-99106-8',
+            publishedYear: 2021,
+            publisher: 'Penguine Books',
+            publisherLogo: 'start_rate_half',
+          },
+        },
+        {
+          cover: {
+            authors: ['David Graeber', 'David Wengrow'],
+            subTitle: 'A new history of Humanity',
+            title: 'The Dawn of Everything 9',
+            teaserText: 'The International Bestseller',
+          },
+          details: {
+            isbn: '978-0-141-99106-9',
+            publishedYear: 2021,
+            publisher: 'Penguine Books',
+            publisherLogo: 'start_rate_half',
+          },
+        },
+        {
+          cover: {
+            authors: ['David Graeber', 'David Wengrow'],
+            subTitle: 'A new history of Humanity',
+            title: 'The Dawn of Everything 10',
+            teaserText: 'The International Bestseller',
+          },
+          details: {
+            isbn: '978-0-141-99106-10',
+            publishedYear: 2021,
+            publisher: 'Penguine Books',
+            publisherLogo: 'start_rate_half',
           },
         },
       ]);

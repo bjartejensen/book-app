@@ -16,28 +16,6 @@
       "foreword": {
         "header": "Foreword and Dedication (by David Wengrow)",
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe distinctio illum tempora iusto nam, similique modi et ab impedit a dignissimos reiciendis."
-      },
-      "content": {
-        "bookContentItems": [
-          {
-            "idx": 1,
-            "title": "Farewell to Humanity's Childhood",
-            "subTitle": "Or why this book is not a book about the origin of inequality",
-            "pageNumber": 1
-          },
-          {
-            "idx": 2,
-            "title": "Farewell to Humanity's Childhood",
-            "subTitle": "Or why this book is not a book about the origin of inequality",
-            "pageNumber": 61
-          },
-          {
-            "idx": 3,
-            "title": "Farewell to Humanity's Childhood",
-            "subTitle": "Or why this book is not a book about the origin of inequality",
-            "pageNumber": 112
-          }
-        ]
       }
     },
     {
@@ -56,16 +34,6 @@
       "foreword": {
         "header": "Foreword and Dedication (by David Wengrow)",
         "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe distinctio illum tempora iusto nam, similique modi et ab impedit a dignissimos reiciendis."
-      },
-      "content": {
-        "bookContentItems": [
-          {
-            "idx": 1,
-            "title": "Farewell to Humanity's Childhood",
-            "subTitle": "Or why this book is not a book about the origin of inequality",
-            "pageNumber": 1
-          }
-        ]
       }
     },
     {
@@ -80,16 +48,6 @@
         "publishedYear": 2021,
         "publisher": "Penguine Books",
         "publisherLogo": "start_rate_half"
-      },
-      "content": {
-        "bookContentItems": [
-          {
-            "idx": 1,
-            "title": "Farewell to Humanity's Childhood",
-            "subTitle": "Or why this book is not a book about the origin of inequality",
-            "pageNumber": 1
-          }
-        ]
       }
     },
     {
@@ -104,16 +62,6 @@
         "publishedYear": 2021,
         "publisher": "Penguine Books",
         "publisherLogo": "start_rate_half"
-      },
-      "content": {
-        "bookContentItems": [
-          {
-            "idx": 1,
-            "title": "Farewell to Humanity's Childhood",
-            "subTitle": "Or why this book is not a book about the origin of inequality",
-            "pageNumber": 1
-          }
-        ]
       }
     },
     {
@@ -128,16 +76,6 @@
         "publishedYear": 2021,
         "publisher": "Penguine Books",
         "publisherLogo": "start_rate_half"
-      },
-      "content": {
-        "bookContentItems": [
-          {
-            "idx": 1,
-            "title": "Farewell to Humanity's Childhood",
-            "subTitle": "Or why this book is not a book about the origin of inequality",
-            "pageNumber": 1
-          }
-        ]
       }
     },
     {
@@ -152,16 +90,6 @@
         "publishedYear": 2021,
         "publisher": "Penguine Books",
         "publisherLogo": "start_rate_half"
-      },
-      "content": {
-        "bookContentItems": [
-          {
-            "idx": 1,
-            "title": "Farewell to Humanity's Childhood",
-            "subTitle": "Or why this book is not a book about the origin of inequality",
-            "pageNumber": 1
-          }
-        ]
       }
     },
     {
@@ -176,16 +104,6 @@
         "publishedYear": 2021,
         "publisher": "Penguine Books",
         "publisherLogo": "start_rate_half"
-      },
-      "content": {
-        "bookContentItems": [
-          {
-            "idx": 1,
-            "title": "Farewell to Humanity's Childhood",
-            "subTitle": "Or why this book is not a book about the origin of inequality",
-            "pageNumber": 1
-          }
-        ]
       }
     },
     {
@@ -200,16 +118,6 @@
         "publishedYear": 2021,
         "publisher": "Penguine Books",
         "publisherLogo": "start_rate_half"
-      },
-      "content": {
-        "bookContentItems": [
-          {
-            "idx": 1,
-            "title": "Farewell to Humanity's Childhood",
-            "subTitle": "Or why this book is not a book about the origin of inequality",
-            "pageNumber": 1
-          }
-        ]
       }
     },
     {
@@ -224,16 +132,6 @@
         "publishedYear": 2021,
         "publisher": "Penguine Books",
         "publisherLogo": "start_rate_half"
-      },
-      "content": {
-        "bookContentItems": [
-          {
-            "idx": 1,
-            "title": "Farewell to Humanity's Childhood",
-            "subTitle": "Or why this book is not a book about the origin of inequality",
-            "pageNumber": 1
-          }
-        ]
       }
     },
     {
@@ -248,16 +146,6 @@
         "publishedYear": 2021,
         "publisher": "Penguine Books",
         "publisherLogo": "start_rate_half"
-      },
-      "content": {
-        "bookContentItems": [
-          {
-            "idx": 1,
-            "title": "Farewell to Humanity's Childhood",
-            "subTitle": "Or why this book is not a book about the origin of inequality",
-            "pageNumber": 1
-          }
-        ]
       }
     }
   ]

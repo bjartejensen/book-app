@@ -2,22 +2,31 @@
 
 .container,
 .title,
+.book-search,
 .books-overview {
   position: relative;
   display: grid;
 }
 
 .container {
-  grid-template-rows: 4rem 150px 1fr;
+  grid-template-rows: 17rem 150px 1fr;
   place-items: center;
   height: 100vh;
   width: 100%;
+
+  @media (min-width: map-get(scss.$break-points,"sm")) {
+    grid-template-rows: 10rem 150px 1fr;
+  }
 }
 
 .cta {
   position: absolute;
   top: 0%;
   right: 0%;
+}
+
+.title {
+  text-align: center;
 }
 
 .books-overview {
