@@ -41,10 +41,10 @@ The weather module is lazy-loaded in the app as specified in the `app-rounting.m
 
   I almost always use Angular Material in projects for four main reasons:
 
-        - Angular Material components
-        - Angular Material Cdk
-        - Typography: Simplyfing typography and centralize styling of text, in turn simplifying the local .scss-style sheets
-        - Theming: Easy to configure themes enforcing a unified look and feel throughout your app
+  - Angular Material components
+  - Angular Material Cdk
+  - Typography: Simplyfing typography and centralize styling of text, in turn simplifying the local .scss-style sheets
+  - Theming: Easy to configure themes enforcing a unified look and feel throughout your app
 
   #### NgRx
 
