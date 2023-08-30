@@ -1,3 +1,5 @@
+[![E2E Tests](https://github.com/bjartejensen/book-app/actions/workflows/e2e-tests.yml/badge.svg)](https://github.com/bjartejensen/book-app/actions/workflows/e2e-tests.yml)
+
 [![Component tests](https://github.com/bjartejensen/book-app/actions/workflows/component-tests.yml/badge.svg)](https://github.com/bjartejensen/book-app/actions/workflows/component-tests.yml)
 
 [![Linting Angular](https://github.com/bjartejensen/book-app/actions/workflows/linting.yml/badge.svg)](https://github.com/bjartejensen/book-app/actions/workflows/linting.yml)
