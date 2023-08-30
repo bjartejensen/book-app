@@ -10,7 +10,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Structure of the app
 
-The main functionality has been set up in the weather module. (the only feature module in this project)
+The main functionality has been set up in the book-store module. (the only feature module in this project)
 
 The module consist of four folders:
 
@@ -19,7 +19,13 @@ The module consist of four folders:
 - model: Interfaces, types and constants used througout the workflow
 - ui: dumb-components with no, or limited, dependencies and with rendering as primary responsibility
 
-The weather module is lazy-loaded in the app as specified in the `app-rounting.module.ts`.
+The book-store module is lazy-loaded in the app as specified in the `app-rounting.module.ts`.
+
+## Solid
+
+Throughout the application I have tried to separate responsibility between components. The SMART/DUMB component distinction is an important way to structure and delegate the responsibility, where DUMB component only receives data via @Input() and only emits data via @Output().
+
+Leveraging Angular’s dependency injection mechanism allows for injection of interfaces rather than class instances. This is an important feature because we can provision highly tailored api’s to SMART components in need of a certain slice of a service, in turn adhering to both the Interface Segregation Principle and Dependency Inversion Principle. (and arguably also staying in line with Liskov’s substitution principle)
 
 ## Testing
 

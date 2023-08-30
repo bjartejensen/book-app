@@ -1,6 +1,7 @@
 <div
   class="container"
   data-cy="book-card"
+  [id]="book.details.isbn"
   (click)="ISBNEmitter.emit(book.details.isbn)"
 >
   <div class="title">

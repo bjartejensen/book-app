@@ -38,7 +38,7 @@ export class FrontpageComponent implements OnInit {
   //#region Life Cycle
 
   ngOnInit(): void {
-    this.booksService.setSelectedISBN('978-0-141-99106-2');
+    //this.booksService.setSelectedISBN('978-0-141-99106-2');
   }
 
   //#endregion

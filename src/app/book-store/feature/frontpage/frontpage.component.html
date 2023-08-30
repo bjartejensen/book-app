@@ -25,7 +25,11 @@
   data-cy="dashboard"
   cdkOverlayOrigin
 >
-  <div class="books-overview" *ngIf="books$ | async as books">
+  <div
+    class="books-overview"
+    data-cy="books-overview"
+    *ngIf="books$ | async as books"
+  >
     <app-book-card
       (ISBNEmitter)="onSelectedISBN($event)"
       *ngFor="let b of books"
