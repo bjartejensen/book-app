@@ -16,7 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     HttpClientModule,
     StoreModule.forRoot({}),
-    EffectsModule.forRoot([BooksEffects]),
+    EffectsModule.forRoot([BooksEffects]), //Register effects in the root module
     BrowserAnimationsModule,
   ],
   providers: [],

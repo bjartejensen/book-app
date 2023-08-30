@@ -28,6 +28,9 @@ export interface IBookForeword {
   content: string;
 }
 
+/**
+ * @description Main Book instance
+ */
 export interface IBookPreview {
   cover: IBookCover;
   details: IBookDetails;

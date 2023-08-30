@@ -9,6 +9,13 @@ export const selectBookInStore = createSelector(
   (state: BookStoreState) => state.books
 );
 
+/**
+ * @description Here we are making use of the fact that ISBN is a unique book identifier
+ * The nullish coalescing operator is implemented to adhere to ES-lint rules as we will always
+ * encounter a preview instance in this simple app. Hence, undefined is ruled out
+ * per se.
+ *
+ */
 export const selectedBookByISBN = createSelector(
   selectBookStoreState,
   (state: BookStoreState) =>

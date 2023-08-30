@@ -8,6 +8,11 @@ import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { IBookPreview } from '../../models/book-store.models';
 
+/**
+ * @description Creating an InjectionToken with a factory provider in order to
+ * distribute an interface in stead of a class. This allows for a more granular
+ * provisioning of methods and properties accessible to components
+ */
 export const BOOKS_FACADE_TOKEN: InjectionToken<IBooksServiceCompositeForFacade> =
   new InjectionToken<IBooksServiceCompositeForFacade>('BOOKS_FACADE_TOKEN', {
     factory() {
@@ -15,9 +20,12 @@ export const BOOKS_FACADE_TOKEN: InjectionToken<IBooksServiceCompositeForFacade>
     },
   });
 
+/**
+ * @description Full implemation of all Book Services related methods and properties
+ */
 export class BooksFacade implements IBooksServiceCompositeForFacade {
   //#region D.I
-  private readonly store = inject(Store);
+  private readonly store = inject(Store); //for referencing actions and selectors
   //#endregion
 
   //#region Implementation - Observables

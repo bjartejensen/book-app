@@ -8,5 +8,11 @@ import { IBookPreview } from '../../models/book-store.models';
 })
 export class BookCardComponent {
   @Input() book!: IBookPreview;
+
+  /**
+   * @description Allow the user to select a book to preview. The event emitter will
+   * trigger an event in the associated SMART-component which in turn will invoke
+   * action, reducer and selector in the NgRx store
+   */
   @Output() ISBNEmitter = new EventEmitter<string>();
 }

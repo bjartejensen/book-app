@@ -1,6 +1,8 @@
 @use "@angular/material" as mat;
 @use "./fonts" as fonts;
 
+//Centralized configuration of typegraphy via Angular Material. Thus no local
+//styling of typography if used adequately
 $noname-typography: mat.define-legacy-typography-config(
   $display-1: mat.define-typography-level(3rem, 3.5rem, 700, fonts.$text-font),
   $display-2: mat.define-typography-level(2.5rem, 3rem, 700, fonts.$text-font),

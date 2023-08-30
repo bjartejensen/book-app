@@ -15,6 +15,14 @@ export class BooksEffects {
 
   //#endregion
 
+  /**
+   * @description Call to server for list of books.
+   * Since we have no real back-end the response when running locally is set-up via
+   * json-server to incorporate a real httpClient call.
+   * In production the response is composed of a hacked list of IBookPreview objects
+   * wrapped in a RxJS of-operator
+   *
+   */
   fetchBooks$ = createEffect(() =>
     this.actions$.pipe(
       ofType(BooksActions.fetchAllBooks),

@@ -6,7 +6,7 @@ const routes: Routes = [
   {
     path: '',
     component: FrontpageComponent,
-    title: 'Book store',
+    title: 'Book store app',
   },
 ];
 

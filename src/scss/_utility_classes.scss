@@ -1,6 +1,7 @@
+//Utility class to support mobile responsiveness in the local templates
+
 //Map of all supported screen resolution breaks
 $w-map: "m" 300, "sm" 800, "md" 1200, "lg" 1600, "xl" 2000;
-
 $break-points: (
   "m": 300px,
   "sm": 800px,

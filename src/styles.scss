@@ -1,3 +1,4 @@
+//We have to pass forward all .scss files if we then to be accessible to local style sheets
 @forward "./scss/utility_classes";
 @forward "./scss/typography";
 @forward "./scss/fonts";

@@ -1,6 +1,8 @@
 import { Observable } from 'rxjs';
 import { IBookPreview } from '../../models/book-store.models';
 
+//#region Internal interface specifications (bundled and exported below)
+
 interface IBooksObserve {
   books$: Observable<IBookPreview[]>;
 }
@@ -21,8 +23,12 @@ interface IResetSelectedISBNDispatch {
   resetSelectedISBN(): void;
 }
 
+//#endregion
+
+//#region Interface externally available
+
 /**
- * Full implementation of Facade API
+ * @description Full implementation of Facade API
  */
 export interface IBooksServiceCompositeForFacade
   extends IBooksObserve,
@@ -32,10 +38,12 @@ export interface IBooksServiceCompositeForFacade
     IResetSelectedISBNDispatch {}
 
 /**
- * Specific provisioning of Book Store Frontpage API
+ * @description Specific provisioning of Book Store Frontpage API
  */
 export interface IBookServiceCompositeForBookStoreFrontpage
   extends IBooksObserve,
     ISelectedBookByISBNObserve,
     ISetSelectedISBNDispatch,
     IResetSelectedISBNDispatch {}
+
+//#endregion
