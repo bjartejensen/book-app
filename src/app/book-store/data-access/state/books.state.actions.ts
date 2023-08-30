@@ -17,3 +17,7 @@ export const setSelectedISBN = createAction(
   '[BOOKS API] Set Selected Book ISBN',
   props<{ ISBN: string }>()
 );
+
+export const resetSelectedISBN = createAction(
+  '[BOOKS API] Reset Selected Book ISBN'
+);

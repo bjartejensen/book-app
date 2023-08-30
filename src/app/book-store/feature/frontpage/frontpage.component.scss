@@ -1,23 +1,30 @@
+@use "../../../../styles.scss" as scss;
+
 .container {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "overview details";
-  width: 100%;
+  place-items: center;
+
   height: 100vh;
+
+  background-color: orange;
+
+  //   @media (min-width: map-get(scss.$break-points,"md")) {
+  //     grid-template-columns: repeat(2, 1fr);
+  //     grid-template-areas: "overview preview";
+  //     background-color: greenyellow;
+  //   }
 }
 
 .books-overview {
-  grid-area: overview;
-  position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  place-items: start center;
   gap: 1rem;
   padding: 1rem;
+  width: 60%;
+  height: 50%;
   border: red dashed 3px;
-}
-
-.book-details {
-  grid-area: details;
-  border: palevioletred 2px dashed;
+  background-color: aquamarine;
+  overflow-y: scroll;
 }

@@ -1,4 +1,30 @@
-<div class="container">
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin]="modaltrigger"
+  [cdkConnectedOverlayOpen]="(selectedBookByISBN$ | async) !== undefined"
+  cdkConnectedOverlayHasBackdrop="true"
+  cdkConnectedOverlayBackdropClass="cdk-overlay-black-backdrop"
+  (backdropClick)="onResetSelectedBookByISIN()"
+  [cdkConnectedOverlayPositions]="[
+    {
+      originX: 'center',
+      originY: 'center',
+      overlayX: 'center',
+      overlayY: 'center'
+    }
+  ]"
+>
+  <app-book-preview
+    [bookPreview]="selectedBookByISBN$ | async"
+  ></app-book-preview>
+</ng-template>
+
+<div
+  class="container"
+  #modaltrigger="cdkOverlayOrigin"
+  data-cy="dashboard"
+  cdkOverlayOrigin
+>
   <div class="books-overview" *ngIf="books$ | async as books">
     <app-book-card
       (ISBNEmitter)="onSelectedISBN($event)"
@@ -6,25 +32,5 @@
       [book]="b"
     >
     </app-book-card>
-  </div>
-  <div class="book-details">
-    <ng-container *ngIf="selectedBookByISBN$ | async as sb">
-      <h2>Selected Book Details</h2>
-      <mat-tab-group animationDuration="0ms">
-        <mat-tab label="Cover">
-          <app-book-cover [bookCover]="sb.cover"></app-book-cover>
-        </mat-tab>
-        <mat-tab label="Details">
-          <app-book-details [bookDetails]="sb.details"></app-book-details>
-        </mat-tab>
-        <mat-tab label="Content">
-          <app-book-content [bookContent]="sb.content"></app-book-content>
-        </mat-tab>
-        <mat-tab label="Foreword">
-          <app-book-foreword [bookForeword]="sb.foreword"></app-book-foreword>
-        </mat-tab>
-      </mat-tab-group>
-      <!-- <span>{{ sb.details.isbn }}</span> -->
-    </ng-container>
   </div>
 </div>

@@ -4,7 +4,7 @@
   (click)="ISBNEmitter.emit(book.details.isbn)"
 >
   <div class="title">
-    <h2 data-cy="book-card-title">{{ book.cover.title }}</h2>
+    <h3 data-cy="book-card-title">{{ book.cover.title }}</h3>
   </div>
   <div class="authors">
     <h4 [id]="i" *ngFor="let author of book.cover.authors; let i = index">

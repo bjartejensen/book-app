@@ -1,0 +1,98 @@
+//Map of all supported screen resolution breaks
+$w-map: "m" 300, "sm" 800, "md" 1200, "lg" 1600, "xl" 2000;
+
+$break-points: (
+  "m": 300px,
+  "sm": 800px,
+  "md": 1200px,
+  "lg": 1600px,
+  "xl": 2000px,
+);
+
+$display-map: "none" none, "flex" flex, "grid" grid, "block" block,
+  "inline" inline, "inline-block" inline-block;
+
+@each $ss, $sw in $w-map {
+  @each $dmk, $dmv in $display-map {
+    .d-#{$ss}-#{$dmk} {
+      @media (min-width: #{$sw}px) {
+        display: #{$dmv};
+      }
+    }
+  }
+}
+
+//Map of font-sizes
+$fs-map: "0" 0rem, "025" 0.25rem, "05" 0.5rem, "075" 0.75rem, "08" 0.8rem,
+  "085" 0.85rem, "09" 0.9rem, "1" 1rem, "125" 1.25rem, "15" 1.5rem,
+  "175" 1.75rem, "2" 2rem, "25" 2.5rem, "3" 3rem, "35" 3.5rem, "4" 4rem,
+  "45" 4.5rem, "5" 5rem, "55" 5.5rem, "6" 6rem, "65" 6.5rem, "7" 7rem,
+  "75" 7.5rem, "8" 8rem, "9" 9rem, "10" 10rem, "150" 15rem, "auto" auto;
+
+@each $ss, $sw in $w-map {
+  @each $name, $size in $fs-map {
+    .p-#{$ss}-#{$name} {
+      @media (min-width: #{$sw}px) {
+        padding: #{$size};
+      }
+    }
+
+    .pb-#{$ss}-#{$name} {
+      @media (min-width: #{$sw}px) {
+        padding-block: #{$size};
+      }
+    }
+
+    .pt-#{$ss}-#{$name} {
+      @media (min-width: #{$sw}px) {
+        padding-top: #{$size};
+      }
+    }
+
+    .pbm-#{$ss}-#{$name} {
+      @media (min-width: #{$sw}px) {
+        padding-bottom: #{$size};
+      }
+    }
+
+    .pi-#{$ss}-#{$name} {
+      @media (min-width: #{$sw}px) {
+        padding-inline: #{$size};
+      }
+    }
+
+    .m-#{$ss}-#{$name} {
+      @media (min-width: #{$sw}px) {
+        margin: #{$size};
+      }
+    }
+
+    .mb-#{$ss}-#{$name} {
+      @media (min-width: #{$sw}px) {
+        margin-block: #{$size};
+      }
+    }
+
+    .mi-#{$ss}-#{$name} {
+      @media (min-width: #{$sw}px) {
+        margin-inline: #{$size};
+      }
+    }
+
+    .mt-#{$ss}-#{$name} {
+      @media (min-width: #{$sw}px) {
+        margin-top: #{$size};
+      }
+    }
+
+    .mbm-#{$ss}-#{$name} {
+      @media (min-width: #{$sw}px) {
+        margin-bottom: #{$size};
+      }
+    }
+  }
+}
+
+.cdk-overlay-black-backdrop {
+  background-color: rgba(0, 0, 0, 0.65);
+}

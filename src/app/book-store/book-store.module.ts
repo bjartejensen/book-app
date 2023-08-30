@@ -11,9 +11,15 @@ import { StoreModule } from '@ngrx/store';
 import { BOOKS_FEATURE_KEY } from './data-access/state/books.state.models';
 import * as fromBooks from './data-access/state/books.state.reducers';
 
+import { OverlayModule } from '@angular/cdk/overlay';
+
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { BookContentItemComponent } from './ui/book-content-item/book-content-item.component';
+import { BookPreviewComponent } from './ui/book-preview/book-preview.component';
+import { TabContentSizeDirective } from './ui/directives/tab-content-size.directive';
+import { MaxWidthDirective } from './feature/directives/max-width.directive';
+import { TabParentContentSizeDirective } from './ui/directives/tab-parent-content-size.directive';
 
 @NgModule({
   declarations: [
@@ -24,6 +30,10 @@ import { BookContentItemComponent } from './ui/book-content-item/book-content-it
     BookCardComponent,
     BookForewordComponent,
     BookContentItemComponent,
+    BookPreviewComponent,
+    TabContentSizeDirective,
+    MaxWidthDirective,
+    TabParentContentSizeDirective,
   ],
   imports: [
     CommonModule,
@@ -31,6 +41,7 @@ import { BookContentItemComponent } from './ui/book-content-item/book-content-it
     StoreModule.forFeature(BOOKS_FEATURE_KEY, fromBooks.booksReducer),
     MatTabsModule,
     MatIconModule,
+    OverlayModule,
   ],
 })
 export class BookStoreModule {}

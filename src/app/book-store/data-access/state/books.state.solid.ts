@@ -17,6 +17,10 @@ interface ISetSelectedISBNDispatch {
   setSelectedISBN(ISBN: string): void;
 }
 
+interface IResetSelectedISBNDispatch {
+  resetSelectedISBN(): void;
+}
+
 /**
  * Full implementation of Facade API
  */
@@ -24,7 +28,8 @@ export interface IBooksServiceCompositeForFacade
   extends IBooksObserve,
     IBooksFetchDispatch,
     ISelectedBookByISBNObserve,
-    ISetSelectedISBNDispatch {}
+    ISetSelectedISBNDispatch,
+    IResetSelectedISBNDispatch {}
 
 /**
  * Specific provisioning of Book Store Frontpage API
@@ -32,4 +37,5 @@ export interface IBooksServiceCompositeForFacade
 export interface IBookServiceCompositeForBookStoreFrontpage
   extends IBooksObserve,
     ISelectedBookByISBNObserve,
-    ISetSelectedISBNDispatch {}
+    ISetSelectedISBNDispatch,
+    IResetSelectedISBNDispatch {}

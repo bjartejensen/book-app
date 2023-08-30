@@ -1,0 +1,33 @@
+<div
+  data-cy="book-preview-container"
+  appTabParentContentSize
+  class="container"
+  *ngIf="bookPreview"
+>
+  <mat-tab-group animationDuration="0ms">
+    <mat-tab class="mat-tab" label="Cover">
+      <app-book-cover
+        data-cy="book-preview-cover"
+        [bookCover]="bookPreview.cover"
+      ></app-book-cover>
+    </mat-tab>
+    <mat-tab label="Details" class="mat-tab">
+      <app-book-details
+        data-cy="book-preview-details"
+        [bookDetails]="bookPreview.details"
+      ></app-book-details>
+    </mat-tab>
+    <mat-tab label="Content">
+      <app-book-content
+        data-cy="book-preview-content"
+        [bookContent]="bookPreview.content"
+      ></app-book-content>
+    </mat-tab>
+    <mat-tab label="Foreword">
+      <app-book-foreword
+        data-cy="book-preview-foreword"
+        [bookForeword]="bookPreview.foreword"
+      ></app-book-foreword>
+    </mat-tab>
+  </mat-tab-group>
+</div>

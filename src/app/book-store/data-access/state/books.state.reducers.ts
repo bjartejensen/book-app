@@ -3,6 +3,7 @@ import {
   fetchAllBooksFailure,
   fetchAllBooksSuccess,
   setSelectedISBN,
+  resetSelectedISBN,
 } from './books.state.actions';
 import { BookStoreState } from './books.state.models';
 import { Action, createReducer, on } from '@ngrx/store';
@@ -31,6 +32,10 @@ const reducer = createReducer(
   on(setSelectedISBN, (state, { ISBN }) => ({
     ...state,
     selectedISBN: ISBN,
+  })),
+  on(resetSelectedISBN, (state) => ({
+    ...state,
+    selectedISBN: undefined,
   }))
 );
 
