@@ -41,3 +41,12 @@ export const setSelectedISBN = createAction(
 export const resetSelectedISBN = createAction(
   '[BOOKS API] Reset Selected Book ISBN'
 );
+
+/**
+ * Search by book title
+ * @prop title: string
+ */
+export const fetchBooksByTitle = createAction(
+  '[BOOKS API] Search books by title',
+  props<{ titleSearch: string }>()
+);

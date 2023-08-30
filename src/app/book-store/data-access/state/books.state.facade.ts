@@ -31,11 +31,19 @@ export class BooksFacade implements IBooksServiceCompositeForFacade {
   //#region Implementation - Observables
 
   books$: Observable<IBookPreview[]> = this.store.pipe(
-    select(BooksSelectors.selectBookInStore)
+    select(BooksSelectors.selectBooksInStore)
+  );
+
+  booksTop3$: Observable<IBookPreview[]> = this.store.pipe(
+    select(BooksSelectors.selectTop3BooksInStore)
   );
 
   selectedBookByISBN$: Observable<IBookPreview | undefined> = this.store.pipe(
     select(BooksSelectors.selectedBookByISBN)
+  );
+
+  booksInSearch$: Observable<IBookPreview[] | undefined> = this.store.pipe(
+    select(BooksSelectors.selectedBooksByTitle)
   );
 
   //#endregion
@@ -61,6 +69,14 @@ export class BooksFacade implements IBooksServiceCompositeForFacade {
   resetSelectedISBN(): void {
     console.log('Getting into the facade reset?');
     this.store.dispatch(BooksActions.resetSelectedISBN());
+  }
+
+  //#endregion
+
+  //#region Implementation - Books Search by Title
+
+  booksSearchByTitleDispatch(title: string): void {
+    this.store.dispatch(BooksActions.fetchBooksByTitle({ titleSearch: title }));
   }
 
   //#endregion

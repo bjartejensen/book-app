@@ -15,13 +15,9 @@ describe('template spec', () => {
     cy.get('#978-0-141-99106-3').should('exist');
   });
 
-  it('show preview when child is clicked', () => {
-    cy.get('[data-cy=book-preview-container]').should('not.exist');
-    cy.get('[data-cy=books-overview]').children().first().click();
-    cy.get('[data-cy=book-preview-container]').should('exist');
-  });
-
-  it('should hide preview after background clicked', () => {
+  it('should show and hide preview after click and then background clicked', () => {
+    cy.get('[data-cy=btn-all-books]').click();
+    cy.url().should('eq', 'http://localhost:4200/books');
     cy.get('[data-cy=book-preview-container]').should('not.exist');
     cy.get('[data-cy=books-overview]').children().first().click();
     cy.get('[data-cy=book-preview-container]').should('exist');

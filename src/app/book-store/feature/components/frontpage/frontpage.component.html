@@ -1,51 +1,29 @@
-<ng-template
-  cdkConnectedOverlay
-  [cdkConnectedOverlayOrigin]="modaltrigger"
-  [cdkConnectedOverlayOpen]="(selectedBookByISBN$ | async) !== undefined"
-  cdkConnectedOverlayHasBackdrop="true"
-  cdkConnectedOverlayBackdropClass="cdk-overlay-black-backdrop"
-  (backdropClick)="onResetSelectedBookByISIN()"
-  [cdkConnectedOverlayPositions]="[
-    {
-      originX: 'center',
-      originY: 'center',
-      overlayX: 'center',
-      overlayY: 'center'
-    }
-  ]"
->
-  <app-book-preview
-    [bookPreview]="selectedBookByISBN$ | async"
-  ></app-book-preview>
-</ng-template>
-
-<div
-  class="container"
-  #modaltrigger="cdkOverlayOrigin"
-  data-cy="dashboard"
-  cdkOverlayOrigin
->
+<div class="container" data-cy="dashboard">
   <div class="cta m-lg-1">
-    <button color="accent" [routerLink]="['/books']" mat-raised-button>
+    <button
+      color="accent"
+      data-cy="btn-all-books"
+      [routerLink]="['/books']"
+      mat-raised-button
+    >
       All Books
     </button>
   </div>
 
   <div class="title p-m-1 mt-md-3">
-    <h1>The Book Store</h1>
+    <h1>The Book Store - Top 3 Best Sellers</h1>
+  </div>
+
+  <div class="book-search">
+    <app-book-search (titleEmitter)="onBookSearch($event)"></app-book-search>
   </div>
 
   <div
     class="books-overview cvw-m-100 cvw-sm-80 cvw-md-70 cvw-lg-60 cvw-xl-50"
     data-cy="books-overview"
-    *ngIf="books$ | async as books"
+    *ngIf="booksCombined$ | async as books"
     appMaxWidth
   >
-    <app-book-card
-      (ISBNEmitter)="onSelectedISBN($event)"
-      *ngFor="let b of books"
-      [book]="b"
-    >
-    </app-book-card>
+    <app-book-card *ngFor="let b of books" [book]="b"> </app-book-card>
   </div>
 </div>

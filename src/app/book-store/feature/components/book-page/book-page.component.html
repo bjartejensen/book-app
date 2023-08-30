@@ -1,1 +1,40 @@
-<p>book-page works!</p>
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin]="modaltrigger"
+  [cdkConnectedOverlayOpen]="(selectedBookByISBN$ | async) !== undefined"
+  cdkConnectedOverlayHasBackdrop="true"
+  cdkConnectedOverlayBackdropClass="cdk-overlay-black-backdrop"
+  (backdropClick)="onResetSelectedBookByISIN()"
+  [cdkConnectedOverlayPositions]="[
+    {
+      originX: 'center',
+      originY: 'center',
+      overlayX: 'center',
+      overlayY: 'center'
+    }
+  ]"
+>
+  <app-book-preview
+    [bookPreview]="selectedBookByISBN$ | async"
+  ></app-book-preview>
+</ng-template>
+
+<div class="container" #modaltrigger="cdkOverlayOrigin" cdkOverlayOrigin>
+  <div class="title p-m-1 mt-md-3">
+    <h1>The Book Store - All Books</h1>
+  </div>
+
+  <div
+    class="books-overview cvw-m-100 cvw-sm-80 cvw-md-70 cvw-lg-60 cvw-xl-50"
+    data-cy="books-overview"
+    *ngIf="books$ | async as books"
+    appMaxWidth
+  >
+    <app-book-card
+      (ISBNEmitter)="onSelectedISBN($event)"
+      *ngFor="let b of books"
+      [book]="b"
+    >
+    </app-book-card>
+  </div>
+</div>

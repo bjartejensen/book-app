@@ -4,6 +4,7 @@ import {
   fetchAllBooksSuccess,
   setSelectedISBN,
   resetSelectedISBN,
+  fetchBooksByTitle,
 } from './books.state.actions';
 import { BookStoreState } from './books.state.models';
 import { Action, createReducer, on } from '@ngrx/store';
@@ -36,6 +37,10 @@ const reducer = createReducer(
   on(resetSelectedISBN, (state) => ({
     ...state,
     selectedISBN: undefined,
+  })),
+  on(fetchBooksByTitle, (state, { titleSearch }) => ({
+    ...state,
+    titleSearch: titleSearch,
   }))
 );
 

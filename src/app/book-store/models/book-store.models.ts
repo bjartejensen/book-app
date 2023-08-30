@@ -19,10 +19,6 @@ export type TBookContentItem = {
   pageNumber: number;
 };
 
-export interface IBookContent {
-  bookContentItems: TBookContentItem[];
-}
-
 export interface IBookForeword {
   header: string;
   content: string;
@@ -34,6 +30,5 @@ export interface IBookForeword {
 export interface IBookPreview {
   cover: IBookCover;
   details: IBookDetails;
-  content: IBookContent;
   foreword?: IBookForeword;
 }

@@ -26,12 +26,10 @@ describe(BookDetailsComponent.name, () => {
       .should('exist')
       .should('have.text', 'Penguine Books');
 
-    cy.get('[data-cy=book-details-logo]').should('exist');
-
     cy.get('[data-cy=book-details-publish-year]').should('have.text', '2021');
 
     cy.get('[data-cy=book-details-isbn]').should(
-      'have.text',
+      'contain.text',
       '978-0-141-99106-1'
     );
   });

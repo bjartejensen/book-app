@@ -1,0 +1,21 @@
+<div data-cy="form-wrapper" class="form-wrapper">
+  <form
+    class="search-form"
+    [formGroup]="bookSearchForm"
+    data-cy="form"
+    (ngSubmit)="onSubmit()"
+  >
+    <mat-form-field>
+      <mat-label>Book Search</mat-label>
+      <input
+        class="book-input"
+        data-cy="title-search"
+        formControlName="title"
+        matInput
+        [type]="'text'"
+        placeholder="e.g. Odyssé"
+        autocomplete="off"
+      />
+    </mat-form-field>
+  </form>
+</div>

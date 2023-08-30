@@ -1,0 +1,22 @@
+@use "../../../../../styles.scss" as scss;
+
+.container,
+.title,
+.books-overview {
+  position: relative;
+  display: grid;
+}
+
+.container {
+  grid-template-rows: 4rem 1fr;
+  place-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.books-overview {
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  place-items: start center;
+  gap: 1rem;
+  padding: 1rem;
+}

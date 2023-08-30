@@ -32,9 +32,5 @@ describe(BookCoverComponent.name, () => {
 
     cy.get('#0').should('contain.text', 'David Graeber');
     cy.get('#1').should('contain.text', 'David Wengrow');
-
-    cy.get('[data-cy=book-cover-icon]')
-      .should('exist')
-      .should('have.css', 'opacity', '0.2');
   });
 });

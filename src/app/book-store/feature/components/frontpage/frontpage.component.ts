@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { IBookServiceCompositeForBookStoreFrontpage } from '../../../data-access/state/books.state.solid';
 import { BOOKS_FACADE_TOKEN } from '../../../data-access/state/books.state.facade';
-import { Observable } from 'rxjs';
+import { combineLatest, map, Observable } from 'rxjs';
 import { IBookPreview } from '../../../models/book-store.models';
 
 @Component({
@@ -20,40 +20,26 @@ export class FrontpageComponent {
   //#region Observables
 
   /**
-   * @description List of books to preview. Fetched from the NgRx store
+   * @description List of Top 3 books. Fetched from the NgRx store
    * via the provisioned service api
    * @returns IBookPreview[]
    */
-  books$: Observable<IBookPreview[]> = this.booksService.books$;
 
-  /**
-   * @description Instance of the user-selected book. Undefined in case of no user selection
-   * @returns IBookPreview
-   */
-  selectedBookByISBN$: Observable<IBookPreview | undefined> =
-    this.booksService.selectedBookByISBN$;
+  booksCombined$: Observable<IBookPreview[]> = combineLatest([
+    this.booksService.booksTop3$,
+    this.booksService.booksInSearch$,
+  ]).pipe(
+    map(([top3, booksInSearch]) => {
+      return booksInSearch && booksInSearch.length > 0 ? booksInSearch : top3;
+    })
+  );
 
   //#endregion
 
   //#region Public Methods
 
-  /**
-   * @description Allowing the user to preview a book.
-   * The provided unique ISBN will be sent to the NgRx store via the book service
-   * and trigger a selectedBookByISBN$ emission.
-   * @param ISBN
-   */
-  onSelectedISBN(ISBN: string): void {
-    this.booksService.setSelectedISBN(ISBN);
-  }
-
-  /**
-   * @description Allowing the user to reset the selected preview.
-   * This method is currently bound to the event binding with the
-   * modal in the associated template
-   */
-  onResetSelectedBookByISIN(): void {
-    this.booksService.resetSelectedISBN();
+  onBookSearch(titleSearch: string) {
+    this.booksService.booksSearchByTitleDispatch(titleSearch);
   }
 
   //#endregion
