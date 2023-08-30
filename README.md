@@ -16,12 +16,6 @@ Testing have been conducted as `component-testing` at the UI-component level and
 
 A priliminary GitHub Actions workflow has been set up for `linting` and `component-testing`. `E2E-test` has been run locally.
 
-## NgRx
-
-In addition, I have strived to code up the solution as reactively and declarative as possible. By using NgRx the current solution aims at setting up a closed circuit of asynchronous data streams via NgRx. This step simplifies data stream subscription, handling of observable streams and thus readability.
-
-The integration of NgRx has consumed some start-up time, and may not a part of the original scope of this task. However, my experience is, that it's always time well spend to set up application-wide state management, almost no matter the initial size or scope. I hope you follow my line of thinking and prioritization.
-
 ## Structure of the app
 
 The main functionality has been set up in the weather module. (the only feature module in this project)
@@ -42,3 +36,16 @@ The weather module is lazy-loaded in the app as specified in the `app-rounting.m
 - NgRx - state management
 
 - Cypress - component- and E2E testing framework
+
+  #### Angular Material
+
+  I almost always use Angular Material in projects for four main reasons:
+
+        - Angular Material components
+        - Angular Material Cdk
+        - Typography: Simplyfing typography and centralize styling of text, in turn simplifying the local .scss-style sheets
+        - Theming: Easy to configure themes enforcing a unified look and feel throughout your app
+
+  #### NgRx
+
+  I strive to code as reactively and declarative as possible. By using NgRx setting up a closed circuit of asynchronous data streams is a lot more feasible than maintaining a suite of subjects and observables. The use of NgRx thus simplifies data stream subscription, handling of observable streams and in turn code readability. In my view setting up NgRx for the main async data flow is always time well spend, no matter the initial size or scope.

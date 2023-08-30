@@ -1,0 +1,58 @@
+@use "@angular/material" as mat;
+@use "./fonts" as fonts;
+
+$noname-typography: mat.define-legacy-typography-config(
+  $display-1: mat.define-typography-level(3rem, 3.5rem, 700, fonts.$text-font),
+  $display-2: mat.define-typography-level(2.5rem, 3rem, 700, fonts.$text-font),
+  $display-3: mat.define-typography-level(2rem, 2.5rem, 700, fonts.$text-font),
+  $display-4: mat.define-typography-level(1.5rem, 2rem, 700, fonts.$text-font),
+  $headline: mat.define-typography-level(1.25rem, 1.5rem, 700, fonts.$text-font),
+  $title: mat.define-typography-level(1rem, 1.25rem, 700, fonts.$text-font),
+  $subheading-2:
+    mat.define-typography-level(1.25rem, 1.35rem, 600, fonts.$text-font),
+  $subheading-1:
+    mat.define-typography-level(1.1rem, 1.75rem, 200, fonts.$text-font),
+  $body-2: mat.define-typography-level(0.875rem, 1rem, 400, fonts.$text-font),
+  $body-1: mat.define-typography-level(0.75rem, 0.85rem, 400, fonts.$text-font),
+  $caption:
+    mat.define-typography-level(0.6875rem, 0.7rem, 400, fonts.$text-font),
+  $button: mat.define-typography-level(1rem, 1rem, 900, fonts.$text-font),
+  $input: mat.define-typography-level(inherit, 1.125, 400),
+);
+
+h1 {
+  @include mat.typography-level($noname-typography, display-1);
+}
+
+h2 {
+  @include mat.typography-level($noname-typography, display-2);
+}
+
+h3 {
+  @include mat.typography-level($noname-typography, display-3);
+}
+
+h4 {
+  @include mat.typography-level($noname-typography, display-4);
+}
+
+h5 {
+  @include mat.typography-level($noname-typography, headline);
+}
+
+h6 {
+  @include mat.typography-level($noname-typography, title);
+}
+
+p,
+li {
+  @include mat.typography-level($noname-typography, body-2);
+}
+
+span {
+  @include mat.typography-level($noname-typography, body-1);
+}
+
+a {
+  @include mat.typography-level($noname-typography, caption);
+}

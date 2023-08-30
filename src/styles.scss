@@ -1,4 +1,6 @@
 @forward "./scss/utility_classes";
+@forward "./scss/typography";
+@forward "./scss/fonts";
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use "@angular/material" as mat;
