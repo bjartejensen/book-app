@@ -1,5 +1,3 @@
-[![E2E Tests](https://github.com/bjartejensen/book-app/actions/workflows/e2e-tests.yml/badge.svg)](https://github.com/bjartejensen/book-app/actions/workflows/e2e-tests.yml)
-
 [![Component tests](https://github.com/bjartejensen/book-app/actions/workflows/component-tests.yml/badge.svg)](https://github.com/bjartejensen/book-app/actions/workflows/component-tests.yml)
 
 [![Linting Angular](https://github.com/bjartejensen/book-app/actions/workflows/linting.yml/badge.svg)](https://github.com/bjartejensen/book-app/actions/workflows/linting.yml)
@@ -21,17 +19,17 @@ The module consist of four folders:
 
 The book-store module is lazy-loaded in the app as specified in the `app-rounting.module.ts`.
 
-## Solid
-
-Throughout the application I have tried to separate responsibility between components. The SMART/DUMB component distinction is an important way to structure and delegate the responsibility, where DUMB component only receives data via @Input() and only emits data via @Output().
-
-Leveraging Angular’s dependency injection mechanism allows for injection of interfaces rather than class instances. This is an important feature because we can provision highly tailored api’s to SMART components in need of a certain slice of a service, in turn adhering to both the Interface Segregation Principle and Dependency Inversion Principle. (and indirectly also staying in line with Liskov’s substitution principle)
-
 ## Testing
 
 Testing have been conducted as `component-testing` at the UI-component level and `E2E-test` on the Feature-component level and all testing is done in Cypress.
 
-A priliminary GitHub Actions workflow has been set up for `linting` and `component-testing` and `E2E-test`.
+A preliminary GitHub Actions workflow has been set up for `linting` and `component-testing`. `E2E-test` is performed locally.
+
+## Solid
+
+Throughout the application I have tried to separate responsibility between components. The SMART/DUMB component distinction is an important way to structure and delegate the responsibility, where DUMB component only receives data via @Input() and only emits data via @Output().
+
+Leveraging Angular’s dependency injection mechanism allows for injection of interfaces rather than class instances. This is an important feature because we can provision highly tailored api’s to SMART components in need of a certain slice of a service, in turn adhering to both the Interface Segregation Principle and Dependency Inversion Principle.
 
 ## External Dependencies
 
@@ -39,7 +37,7 @@ A priliminary GitHub Actions workflow has been set up for `linting` and `compone
 
 - NgRx - state management
 
-- Cypress - component- and E2E testing framework
+- Cypress - Component- and E2E testing framework
 
   #### Angular Material
 
