@@ -1,5 +1,11 @@
 @use "../../../../../styles.scss" as scss;
 
+.cta {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+
 .container,
 .title,
 .book-search,
@@ -11,18 +17,12 @@
 .container {
   grid-template-rows: 17rem 150px 1fr;
   place-items: center;
-  height: 100vh;
+  height: 95vh;
   width: 100%;
 
   @media (min-width: map-get(scss.$break-points,"sm")) {
     grid-template-rows: 10rem 150px 1fr;
   }
-}
-
-.cta {
-  position: absolute;
-  top: 0%;
-  right: 0%;
 }
 
 .title {
@@ -31,7 +31,8 @@
 
 .books-overview {
   grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-  place-items: start center;
+  place-items: center;
   gap: 1rem;
   padding: 1rem;
+  border: 2px scss.$preview-bg-color solid;
 }

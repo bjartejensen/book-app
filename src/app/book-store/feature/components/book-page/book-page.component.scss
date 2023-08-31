@@ -8,10 +8,22 @@
 }
 
 .container {
-  grid-template-rows: 4rem 1fr;
+  grid-template-rows: 10rem 1fr;
   place-items: center;
-  height: 100vh;
+  height: 95vh;
   width: 100%;
+
+  @media (min-width: map-get(scss.$break-points,"lg")) {
+    grid-template-rows: 4rem 1fr;
+  }
+
+  @media (min-width: map-get(scss.$break-points,"xl")) {
+    grid-template-rows: 10rem 1fr;
+  }
+}
+
+.title {
+  text-align: center;
 }
 
 .books-overview {
@@ -19,4 +31,5 @@
   place-items: start center;
   gap: 1rem;
   padding: 1rem;
+  border: 2px scss.$preview-bg-color solid;
 }
